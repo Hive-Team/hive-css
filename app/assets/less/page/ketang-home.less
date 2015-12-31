@@ -1,0 +1,43 @@
+//组装婚礼课堂首页
+.ketang-home-page(@ketang_home_w:@default_w){
+  //课堂内容列表
+  .list-recommend{
+    .list-13-jsbn(@ketang_home_w;@ketang_home_w);
+    .clear;
+  }
+  //tab选项卡切换
+  .kt-tab{
+  	.tab-1-jsbn-hive(@ketang_home_w);
+  }
+	//更多按钮
+	.more-btn{
+		.btn-1-jsbn-hive();
+	}
+  //课堂详情
+  .ktmain-info{
+    .content{
+    @pdt:40;
+    @pdb:30; 
+    @mgt:20;
+    @mgb:20;
+    .paddingTop(@pdt;@ketang_home_w);
+    .paddingBottom(@pdb;@ketang_home_w);
+    p{
+      text-indent: 2em;
+      text-align: center;
+      .fontSize(@f_s:14;@ketang_home_w);
+      .lineHeight(@l_h:26;@ketang_home_w);
+      color: #333;
+    }
+    img{ display:block; text-align: center;margin: 0 auto; .marginTop(@mgt;@ketang_home_w);.marginBottom(@mgb;@ketang_home_w);}
+    span{color:#999;}
+    h2{
+      text-align: center;
+      .fontSize(@f_s:18;@ketang_home_w);
+      .lineHeight(@l_h:30;@ketang_home_w);
+      color: #333; font-weight: bold;
+    }
+    }
+  }
+
+}

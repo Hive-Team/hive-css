@@ -1,0 +1,130 @@
+//微电影首页
+.wdy-page(@home_w:@default_w){  
+    .clear();
+
+  //推荐列表
+  .list-recommend{
+    .list-20-jsbn(@default_w;@home_w);    
+  }
+
+  //导航
+  .nav-box{
+    .height(115;@home_w);
+    .marginBottom(30;@home_w);
+    img{width:100%;}
+    .hover-box{
+      .height(115;@home_w);
+      .clear();      
+      &{position:absolute;top:0;left:0;width:100%;}
+    }
+    .hover-item{
+      .width(300;@home_w);      
+      .transitions-all(@time:0.2s);
+      i{
+        .arrow-1-hive(b,@color:#fa0634,@arrow_w:10,@arrow_h:8,@home_w);
+        .marginLeft(-5;@home_w);
+        .bottom(0;@home_w);
+        .opacity(0);
+        .transitions-all(@time:0.2s);
+        &{position:absolute;left:50%;}
+      }
+      span{
+        .opacity(0);
+        &{display:block;width:100%;height:100%;background-color: #fff;}
+      }
+      &{height:100%;float:left;border-bottom: 4px solid #e3e3e3;position:relative;cursor:pointer;}
+      &:hover{
+        i{
+          .opacity(100);
+          .bottom(-16;@home_w);
+        }
+        &{border-bottom-color: #fa0634;}
+      }
+    }
+    .sel{
+      i{
+        .opacity(100);
+        .bottom(-16;@home_w);
+      }
+      &{border-bottom-color: #fa0634;}
+    }
+    &{position: relative;}
+  }
+
+
+  
+
+  //列表盒子
+  .list-box{
+  	.line-top-hive(@margin_t:0;@pading_t:35;@home_w);
+  	.marginBottom(60;@home_w);
+  	.title{
+  		.fontSize(18;@home_w);
+  		&{display:block;}  		
+      	.marginBottom(15;@home_w);
+  	}
+  }
+
+  //分类标题
+  .title-fl{
+  	.height(36;@home_w);
+  	.marginRight(30;@home_w);
+  }
+  .title-01{ 
+  	.title-fl;
+  	&{background: url(../img/movie/wdy-tit-01.png) right no-repeat;}
+  }
+  .title-02{ 
+  	.title-fl;
+  	&{background: url(../img/movie/wdy-tit-02.png) right no-repeat;}
+  }
+  .title-03{ 
+  	.title-fl;
+  	&{background: url(../img/movie/wdy-tit-03.png) right no-repeat;}
+  }
+
+  //详情页
+  .video-box{
+    &{float: left;}
+    .width(800;@home_w);
+  }
+  .info-box{    
+    .marginTop(25;@home_w);
+    .marginLeft(20;@home_w);
+    .marginBottom(50;@home_w);
+    h1{
+      .fontSize(24;@home_w);
+      .marginBottom(10;@home_w);
+      &{color: #333;display: inline-block;font-weight: normal;}
+    }
+    p{
+      .fontSize(12;@home_w);
+      &{color: #999;}
+    }
+  }
+
+  .list-right{
+    .list-19-jsbn(320;@home_w);
+    &{float: right;}
+    h2{
+      .fontSize(16;@home_w);
+      .paddingLeft(5;@home_w);
+      .marginBottom(10;@home_w);
+      &{font-weight: normal;}
+    }
+  }
+
+
+  //视频详情
+  .title-vid{
+    .fontSize(30;@home_w);
+    .height(70;@home_w);
+    .lineHeight(70;@home_w);
+    &{text-align: center;}
+  }
+  .info-vid{
+    .marginTop(30;@home_w);
+    .lineHeight(24;@home_w);
+    &{color:#666;text-indent:2em;}
+  }
+}

@@ -1,0 +1,179 @@
+//组装全站CSS
+.assemble(@adaptation_w:@default_w){
+
+  //居中容器
+  .layout-center-box{ 
+    .layout-center(@adaptation_w);
+  }
+
+  //全站顶部
+  .header-view{}
+
+  //全站底部
+  .footer-view{
+    .layout-center(@adaptation_w);
+    .footer-block(@adaptation_w);
+    .line-top-hive(30;40;@adaptation_w);
+  }
+
+  //bannar
+  .bannar-box{
+    .bannar(@adaptation_w);
+  }
+
+
+  //分辨率测试
+  .adaptation-box{
+    .adaptation-bat();
+  }
+
+  //弹出详情页
+  #detail-modual{
+    .float-detail-jsbn-hive(@adaptation_w);
+  }
+
+  //筛选结果
+  .screening-results{
+    .height(50;@adaptation_w);
+    .marginBottom(25;@adaptation_w);  
+    &{position: relative;}
+    .find{
+      span{.fontSize(12;@adaptation_w);}
+      b{ color: #f873a0 ;font-weight: normal;.fontSize(12;@adaptation_w);}
+      &{position:absolute;right:0;bottom:0;}
+    } 
+  }
+
+  //清除浮动
+  .clearfix{
+    .clear;
+  }
+  //选项标题
+  .filter-title{
+    .tit-1-jsbn-hive(@adaptation_w);
+  }
+
+  //筛选条
+  .filter-box{
+    .filter-1-jsbn-hive(@adaptation_w);
+  }
+
+  //首页
+  .home-view{
+    .home-page(@adaptation_w);
+  }
+
+  //婚纱摄影首页
+  .hssy-home-view{
+    .hssy-home-page(@adaptation_w);
+  }
+
+  //样片欣赏
+  .ypxs-view{
+    .ypxs-page(@adaptation_w);
+  }
+
+  //样片欣赏
+  .kpxs-view{
+    .kpxs-page(@adaptation_w);
+  }
+
+  //套系报价
+  .txbj-view{
+    .txbj-page(@adaptation_w);
+  }
+
+  //婚纱纪实
+  .hsjs-view{
+    .hsjs-page(@adaptation_w);
+  }
+
+  //选摄影师
+  .xsys-view{
+    .xsys-page(@adaptation_w);
+  }
+
+  //婚庆课堂
+   .ketang-view{
+     .ketang-home-page(@adaptation_w);
+   }
+   //婚宴预订
+   .hyyd-view{
+     .hyyd-home-page(@adaptation_w);
+   }
+   //婚宴预订详情
+
+   .hyyd-detail-view{
+     .hyyd-detail-page(@adaptation_w);
+   }
+
+  //婚庆首页
+  .hqdz-home-view{
+    .hqdz-home-page(@adaptation_w);
+  }
+
+  //婚庆-提交需求
+  .hq-tjxq-view{
+    .hq-tjxq-page(@adaptation_w);
+  }
+
+  //婚礼视频
+  .hlsp-view{
+    .hlsp-page(@adaptation_w);
+  }
+
+  //选策划师
+  .xchs-view{
+    .xchs-page(@adaptation_w);
+  }
+
+  //提交需求
+  .tjxq-view{
+    .tjxq-page(@adaptation_w);
+  }
+
+  //f4
+  .f4-view{
+    .f4-page(@adaptation_w);
+  }
+
+  //案例详情
+  .alxq-view{
+    .alxq-page(@adaptation_w);
+  }
+  //实景案例
+  .sjal-view{
+    .sjal-page(@adaptation_w);
+  } 
+
+  //婚纱礼服
+  .hslf-view{
+    .hslf-page(@adaptation_w);
+  } 
+
+  //婚纱礼服详情
+  .hslf-xq-view{
+    .hslf-xq-page(@adaptation_w);
+  } 
+
+  //微电影首页
+  .wdy-view{
+    .wdy-page(@adaptation_w);
+  } 
+
+  //婚礼用品首页
+  .hlyp-view{
+    .hlyp-page(@adaptation_w);
+  }
+
+  //婚车租赁首页
+   .zuche-view{
+     .zuche-home-page(@adaptation_w);
+  } 
+
+  //婚礼跟拍
+   .hlgp-view{
+     .hlgp-page(@adaptation_w);
+  } 
+
+}

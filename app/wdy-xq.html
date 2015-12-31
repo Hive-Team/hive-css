@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <title>hive-css</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/minicss/app.css" />
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js" ></script>
+    <script type="text/javascript" src="./src/vendors/slider.js" ></script>
+    <script type="text/javascript" src="./bower_components/jquery/src/jquery.tinyscrollbar.js" ></script>
+</head>
+<body class="adaptation-1200">
+<div class="wdy-view">
+    <div class="layout-center-box">
+    
+        <div class="video-box">
+            <embed src="http://player.youku.com/player.php/Type/Folder/Fid/26084909/Ob/1/sid/XMTMzNzc4NzYyMA==/v.swf" quality="high" width="800" height="450" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash" class="vidio-wdyxq" style="width: 100%;"></embed>
+            <div class="info-box">
+                <h1>最幸福的时光</h1>
+                <p>世间所有的相遇，都是久别重逢，遇见你就是幸福的开始。</p>
+            </div>
+        </div>
+        <ul class="list-right">
+            <h2>最新微电影</h2>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+                <div class="title-box"><span>我们的匆匆那年</span></div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+                <div class="title-box"><span>我们的匆匆那年</span></div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+                <div class="title-box"><span>我们的匆匆那年</span></div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+                <div class="title-box"><span>我们的匆匆那年</span></div>
+            </li>
+        </ul>
+               
+    </div>
+</div>
+<div class="footer-view">
+    <div class="nav-map">
+        <a href="#/aboutUs">关于金色百年</a>
+        <a href="#/aboutUs">联系我们</a>
+    </div>
+    <div class="er-wei-ma">
+        <span>关注金色百年</span>
+        <img src="http://image.jsbn.com/static/QR_Codes.jpg@1e_80w_80h_1c_0i_1o_90Q_1x">
+    </div>
+    <div class="nav-map nav-map-1">
+        <a>渝ICP备15007161号-1</a>
+        <a href="">版权说明</a>
+        <a href="">服务条款</a>
+    </div>
+</div>
+<div class="adaptation-box">
+    <div class="title" id="Test">Test</div>
+    <div class="bg"></div>
+    <div class="btn-box" id="showBox">
+        <div class="btn">960</div>
+        <div class="btn">1200</div>
+        <div class="btn">1440</div>
+        <div class="btn">1680</div>
+        <div class="close" id="hideBox">hide</div>
+    </div>
+</div>
+<script type="text/javascript">        
+    $(document).ready(function(){
+        var Open = false;
+        $("#Test").bind("click", function (){
+            $(this).fadeOut("fast",function(){
+                $("#showBox").show(200);
+            })
+        });
+        $("#hideBox").bind("click", function (){
+            $("#showBox").hide("normal",function(){
+                $("#Test").fadeIn(200);
+            })
+        });
+        $(".btn").bind("click", function () {                
+            var Fbl = $(this).text();
+            $(document.body).removeClass().addClass("adaptation-" + Fbl);
+        });
+    });
+</script>
+</body>
+</html>

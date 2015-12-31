@@ -1,0 +1,38 @@
+//婚庆首页
+.hlsp-page(@home_w:@default_w){
+
+  //视频列表
+  .movie-list{
+  	.list-10-jsbn(1200;@home_w);
+  	.ico-play{
+  		display:inline-block; width:40px;height:40px; background:url(../img/play-40.png) no-repeat center;
+  		.marginBottom(10;@home_w);
+  	}
+  	.info{
+  		.marginTop(-54;@home_w);
+  	}
+  	h3{
+  		.marginBottom(15;@home_w);
+  	}
+  }
+  //居中标题
+  .title-center{
+    .tit-2-jsbn-hive(@home_w);
+    .marginBottom(50;@home_w);
+  }
+
+  //跟拍分季选项卡
+  .tab-box{
+    .tab-4-jsbn-hive(@home_w);
+  }
+
+  //分季标题
+  .title-fj{
+    .marginBottom(20;@home_w);
+    h2{
+      font-weight: normal;text-align: center;
+      .fontSize(24;@home_w);
+    }
+  }
+
+}

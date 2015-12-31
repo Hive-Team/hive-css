@@ -1,0 +1,94 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <title>hive-css</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/minicss/app.css" />
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js" ></script>
+    <script type="text/javascript" src="./src/vendors/slider.js" ></script>
+    <script type="text/javascript" src="./bower_components/jquery/src/jquery.tinyscrollbar.js" ></script>
+</head>
+<body class="adaptation-1200">
+<div class="hslf-xq-view">
+    <div class="layout-center-box"> 
+        <ul class="list-recommend">            
+            <li class="item-box">
+                <a class="img-box" href=""><img src="http://image.jsbn.com/WebImage/cq/jpg/20150928/77520046727262073264/20150928162340001190_945x1418.jpg@550h_90Q"></a>
+                <div class="title-box"><span>护肤</span></div>
+            </li>
+            <li class="item-box">                
+                <a class="img-box" href="">                
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20150928/77520046727262073264/20150928162340001190_945x1418.jpg@550h_90Q">
+                </a>
+                <div class="title-box"><span>护肤</span></div>
+            </li>
+            <li class="item-box">
+                <a class="img-box" href=""><img src="http://image.jsbn.com/WebImage/cq/jpg/20150928/77520046727262073264/20150928162340001190_945x1418.jpg@550h_90Q"></a>
+                <div class="title-box"><span>护肤</span></div>
+            </li>
+            <li class="item-box">
+                <a class="img-box" href=""><img src="http://image.jsbn.com/WebImage/cq/jpg/20150928/77520046727262073264/20150928162340001190_945x1418.jpg@550h_90Q"></a>
+                <div class="title-box"><span>护肤</span></div>
+            </li>
+            <li class="item-box">
+                <a class="img-box" href=""><img src="http://image.jsbn.com/WebImage/cq/jpg/20150928/77520046727262073264/20150928162340001190_945x1418.jpg@550h_90Q"></a>
+                <div class="title-box"><span>护肤</span></div>
+            </li>
+            <li class="item-box">
+                <a class="img-box" href=""><img src="http://image.jsbn.com/WebImage/cq/jpg/20150928/77520046727262073264/20150928162340001190_945x1418.jpg@550h_90Q"></a>
+                <div class="title-box"><span>护肤</span></div>
+            </li>
+        </ul>
+    </div>    
+</div>
+<div class="footer-view">
+    <div class="nav-map">
+        <a href="#/aboutUs">关于金色百年</a>
+        <a href="#/aboutUs">联系我们</a>
+    </div>
+    <div class="er-wei-ma">
+        <span>关注金色百年</span>
+        <img src="http://image.jsbn.com/static/QR_Codes.jpg@1e_80w_80h_1c_0i_1o_90Q_1x">
+    </div>
+    <div class="nav-map nav-map-1">
+        <a>渝ICP备15007161号-1</a>
+        <a href="">版权说明</a>
+        <a href="">服务条款</a>
+    </div>
+</div>
+<div class="adaptation-box">
+    <div class="title" id="Test">Test</div>
+    <div class="bg"></div>
+    <div class="btn-box" id="showBox">
+        <div class="btn">960</div>
+        <div class="btn">1200</div>
+        <div class="btn">1440</div>
+        <div class="btn">1680</div>
+        <div class="close" id="hideBox">hide</div>
+    </div>
+</div>
+<script type="text/javascript"> 
+    $(function(){
+        var Open = false;
+        $("#Test").bind("click", function (){
+            $(this).fadeOut("fast",function(){
+                $("#showBox").show(200);
+            })
+        });
+        $("#hideBox").bind("click", function (){
+            $("#showBox").hide("normal",function(){
+                $("#Test").fadeIn(200);
+            })
+        });
+        $(".btn").bind("click", function () {                
+            var Fbl = $(this).text();
+            $(document.body).removeClass().addClass("adaptation-" + Fbl);
+        });
+    })
+</script>
+</body>
+</html>

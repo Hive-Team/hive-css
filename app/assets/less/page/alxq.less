@@ -1,0 +1,113 @@
+//案例详情
+.alxq-page(@home_w:@default_w){
+
+  //图片展示
+  .photo-show-box{
+  	.thumbnail-1-hive(
+	  @w:1200;
+	  @big_h:800;
+	  @big_mgb:20;
+	  @bg_w:50;
+	  @ico_w:35;
+    @ico_h:56;
+	  @item_num:8;
+	  @border:3px;
+	  @border_c:#fff;
+	  @border_c2:#FC5682;
+	  @ad_w:@home_w);
+    .kpxq-img-box{height:100%;}
+  	.small-img-box{  		
+  		.line-bot-hive(@margin_b:0;@pading_b:20;@home_w);
+  		border-bottom: 1px solid #999;
+  	}
+  }
+  .tilte-box{
+  	.tit-3-jsbn-hive(@tit_h:40;@font_s:26;@pd:15;@border:6px;@home_w);
+  	.marginTop(20;@home_w);
+  	.marginBottom(60;@home_w);
+  }
+  .case-detail-box{.clear();};
+  .left-box{
+  	float: left;
+  	.width(294;@home_w);
+  }
+  .intr-box{
+  	p{
+    color: #666;
+    .fontSize(12;@home_w);
+    .lineHeight(30;@home_w);
+  	.padding(@home_w,0,20);
+  	}
+  }
+  .right-box{
+  	float:left;border-left: 1px solid #ccc;
+  	.width(904;@home_w);
+  }
+  .info-title{
+  	.tit-3-jsbn-hive(@tit_h:30;@font_s:20;@pd:45;@border:5px;@home_w);
+  	.marginBottom(20;@home_w);
+  }
+  .theme-content{  	
+  	.paddingLeft(50;@home_w);
+  	.marginBottom(40;@home_w);
+  	.clear();
+    p{.fontSize(14;@home_w);}
+  }
+  .type-box{
+  	float:left;
+  	.marginRight(50;@home_w);
+  	span{
+  		display: block; float: left; color: #999;
+  		.height(20;@home_w); 
+  		.lineHeight(20;@home_w); 
+  		.paddingRight(10;@home_w); 
+      .fontSize(12;@home_w); 
+  	}
+  	p{
+  		color: #333;float: left;
+  		.fontSize(14;@home_w);
+  		.marginRight(10;@home_w);
+    }
+    i{
+    	display:inline-block;
+    	.width(20;@home_w);
+    	.height(20;@home_w);
+    	.marginRight(5;@home_w);
+    }
+  }
+  .violet{background-color: #f29df4;}
+  .golden{background-color: #cc9600;}
+
+  .all-price{
+  	.padding(@home_w,0,20);
+  	.height(60;@home_w); 
+  	.lineHeight(60;@home_w);
+  }
+  .in-pirce{
+  	color:#FC5682;
+  	span{font-weight: bold;.fontSize(16;@home_w);}
+  	em{font-weight: bold;.fontSize(18;@home_w);}
+  	b{font-weight: bold;.fontSize(30;@home_w);}  	
+  }
+  .del-pirce{
+  	color:#999;
+  	span{.fontSize(12;@home_w);}
+  	b{
+  		font-weight: normal;text-decoration: line-through;
+  		.fontSize(12;@home_w);
+  	}
+  }
+  .price-box{
+  	border-top: 1px solid #666;display:inline-block;
+  	.height(50;@home_w);
+  	.lineHeight(50;@home_w); 
+    b{.fontSize(14;@home_w);}
+  }
+  .price-detail{
+  	float:left;
+  	.padding(@home_w,0,20);
+  	span{.fontSize(12;@home_w);}
+  	em{.marginLeft(10;@home_w);}  	
+  }
+  .first{ border-right: 1px solid #ccc;}
+}

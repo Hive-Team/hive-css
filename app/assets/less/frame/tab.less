@@ -1,0 +1,250 @@
+//婚礼课堂选项卡
+.tab-1-jsbn-hive(@ad_w:@default_w){
+	@tab_h:38;
+	@mgt:20;
+	@mgb:20;
+	.height(@tab_h;@ad_w);
+	.lineHeight(@l_h:38;@ad_w);
+	.marginTop(@mgt;@ad_w);
+	.marginBottom(@mgb;@ad_w);
+	a{
+		@a_w:170;
+		@tab_h:38;
+		.height(@tab_h;@ad_w);
+		.fontSize(16;@ad_w);
+		.width(@a_w;@ad_w);
+		float: left;text-align:center; color: #000;font-weight: bold;border-right: 1px solid #fff; background-color: #eeeeee;
+		&:hover{background-color: #ec1c64; color: #fff;}
+		&.action{background-color: #ec1c64; color: #fff;}
+	}
+}
+
+//婚宴预订筛选条
+
+.tab-2-jsbn-hive(@ad_w:@default_w){
+	@scr_h:49;
+	@line1_h:2;
+	@itm_h:47;
+	@itpdl:30;
+	@itpdr:30;
+	.height(@scr_h;@ad_w);
+	border:1px solid #ddd;background-color:#fafafa;border-top:none;position:relative;overflow:hidden;
+	.line-1{
+		.height(@line1_h;@ad_w);
+		width:100%;background-color:#000;position:absolute;left:0;top:0;
+	}
+	.item{
+		.height(@itm_h;@ad_w);
+		.fontSize(14;@ad_w);
+		.lineHeight(@l_h:47;@ad_w);
+		.paddingLeft(@itpdl;@ad_w);
+		.paddingRight(@itpdr;@ad_w);
+		display:block;float:left;
+		overflow:hidden;color:#333;border-top:2px solid #000;cursor:pointer;border-right:1px solid #ddd;
+	}
+	.arrow-box{
+		@mgl:5;
+		.marginLeft(@mgl;@ad_w);
+		display:inline-block;
+		//上下小三角图标
+		// .arrow-5-down-1-js{
+		// 	@mgt:2;
+		// 	.marginTop(@mgt;@ad_w);
+		// }
+		// .arrow-5-up-1-js{border-color:transparent transparent #FC5682;}
+	}
+	input{
+		@mgt_it:18;
+		@mgr_it:5;
+		.marginRight(@mgr_it;@ad_w);
+		.marginTop(@mgt_it;@ad_w);
+		float:left;
+	}
+	.info-box{
+		@ifb_h:47;
+		@ifb_mgt:3;
+		.height(@ifb_h;@ad_w);
+		.marginTop(@ifb_mgt;@ad_w);
+		float:right;
+		.btn{
+			@ibtn_w:50;
+			.width(@ibtn_w;@ad_w);
+			float:left;height:100%;position:relative;border-left:1px solid #ddd;cursor:pointer;
+		}
+		.current{
+			background-color:#fff;
+		}
+		.ico-7-js{
+			@ic_mgt:13;
+			@ic_mgl:11;
+			.marginTop(@ic_mgt;@ad_w);
+			.marginLeft(@ic_mgl;@ad_w);
+		}
+	}
+	.result{
+		@rst_pdl:10;
+		@rst_pdr:10;
+		@rst_h:47;
+		.paddingLeft(@rst_pdl;@ad_w);
+		.paddingRight(@rst_pdr;@ad_w);
+		.height(@rst_h;@ad_w);
+		.lineHeight(@l_h:47;@ad_w);		
+		float:left;
+		span{color:#333;.fontSize(12;@ad_w);}
+		b{
+			@bpdl:3;
+			@bpdr:3;
+			.paddingLeft(@bpdl;@ad_w);
+			.paddingRight(@bpdr;@ad_w);
+			.fontSize(12;@ad_w);
+			color:#FC5682;
+		}
+	}
+	//酒店筛选条件按照酒店名称搜索
+	.search-box{
+		@mgt:9;
+		.height(30;@ad_w);
+		.marginTop(@mgt;@ad_w);
+		float:left;
+	}
+	.search{
+		@mgl:30;
+		.marginLeft(@mgl;@ad_w);
+		.height(28;@ad_w);
+		.width(260;@ad_w);
+		border:1px solid #e0e0e0;background-color:#fff;float:left;position:relative;
+		input{
+			.height(16;@ad_w);
+			.width(224;@ad_w);
+			.fontSize(14;@ad_w);
+			.padding(@ad_w,8,6,4,30);
+			color:#333;
+		}
+		.ico-6-js{position:absolute;left:6px;top:6px; float: left;}
+		.txt{margin-top: 0;.lineHeight(@l_h:16;@ad_w);}
+	}
+	.sub-1-js{
+		.height(30;@ad_w);
+		.padding(@ad_w,0,10);
+		 background-color: #FC5682;display: block;color: #fff;position: relative;float: left;
+		 .subt{
+			.lineHeight(@l_h:30;@ad_w);
+			.fontSize(14;@ad_w);
+			margin-top: 0px; background:none; color: #fff;
+		}
+	}
+}
+
+//左侧选项卡
+.tab-3-jsbn-hive(@ad_w:@default_w){
+	@box_h:600;
+	@img_w:900;
+	@item_w:200;
+	@item_h:85;
+	text-align: center;
+	.center-box{display:inline-block;}
+	.tab-box{
+		float:left;
+		.width(@item_w;@ad_w);
+	}
+	.item{
+		text-align: center;overflow:hidden;cursor: pointer;position:relative;
+		.width(@item_w;@ad_w);
+		.height(@item_h;@ad_w);
+		img{width:100%;height:100%;}
+		&:hover{
+			&:after{content:"";display:block;width:100%;height:100%;position:absolute;top: 0;background-color: #000; .opacity(50);}
+		}
+	}
+	.item-sel{
+		&:after{content:"";display:block;width:100%;height:100%;position:absolute;top: 0;background-color: #000; .opacity(50);}
+	}
+	.show-box{
+		float:left;
+		.width(@img_w;@ad_w);
+		.height(@box_h;@ad_w);
+		img{width:100%;height:100%;}
+	}
+}
+
+//分季选项卡
+.tab-4-jsbn-hive(@box_w:1200;@ad_w:@default_w){
+	@show_num:5;
+	@item_mg:40;
+	@item_w:(@box_w - @item_mg*4)/@show_num;
+	@pic_h:@item_w/3*2;
+	@pic_bot:5;
+	@tit_h:42;
+	@box_h:@pic_h + @pic_bot + @tit_h;
+	@tit_s:12;
+	@arrow_w:60;
+	@arrow_h:30;
+	position: relative;margin-bottom:50px;
+	.height(@box_h;@ad_w);
+	.overflow-box{width: 100%; height: 100%; overflow: hidden; position: relative;}
+	.item-box{
+		overflow: hidden; cursor: pointer;position: absolute; left: 0; top: 0;
+		.height(@box_h;@ad_w);
+	}
+	.item{
+		float:left; text-align: center;height:100%;position:absolute;
+		.width(@item_w;@ad_w);
+		.marginRight(@item_mg;@ad_w);
+	}
+	.pos-box{
+		position:relative;width:100%;height:100%;
+		&:hover{
+			p{color:#e93b78;}
+		}
+	}
+	.click-box{position:absolute;width:100%;height:100%;z-index:100;}
+	.pic{
+		width: 100%;background: #999;
+		.height(@pic_h;@ad_w);
+		.marginBottom(@pic_bot;@ad_w);
+	}
+	img{width: 100%;height: 100%;}
+	p{
+		background-color: #f3f3f3;overflow:hidden;
+		.padding(@ad_w,4,2);
+		.transitions-all(@time:0.2s);
+		span{
+			color: #333; font-weight:normal;overflow:hidden;
+			.fontSize(@tit_s;@ad_w);
+			.lineHeight(@tit_s;@ad_w);
+		}
+	}
+	.item-current{
+		p{
+			background-color:#ddd; 	
+			span{color: #e93b78; font-weight: bold;}
+		}
+	}
+	.arrow-lef{
+		position: absolute;cursor: pointer;
+		.left(-50;@ad_w);
+		.top(65;@ad_w);
+		.transitions-all(@time:0.2s);
+		.arrow-1-hive(l,@color:#eee,@arrow_w,@arrow_h,@ad_w);		
+	}
+	.arrow-rig{
+		position: absolute;cursor: pointer;
+		.right(-50;@ad_w);
+		.top(65;@ad_w);
+		.transitions-all(@time:0.2s);
+		.arrow-1-hive(r,@color:#eee,@arrow_w,@arrow_h,@ad_w);		
+	}
+	&:hover{
+		.arrow-lef{border-color:transparent #e1e1e1 transparent transparent;}
+		.arrow-rig{border-color:transparent transparent transparent #e1e1e1;}
+	}
+	.arrow-lef{
+		&:hover{border-color:transparent #e93b78 transparent transparent;}
+	}
+	.arrow-rig{
+		&:hover{border-color:transparent transparent transparent #e93b78;}
+	}
+}
+// .adaptation-1680{
+
+// }

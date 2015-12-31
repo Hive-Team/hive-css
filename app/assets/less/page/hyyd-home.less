@@ -1,0 +1,41 @@
+//组装婚宴预订首页
+.hyyd-home-page(@hyyd_home_w:@default_w){
+	
+  //筛选条
+	.filter-box{
+		.filter-1-jsbn-hive(@hyyd_home_w);
+	}
+
+  //酒店列表
+  .list-recommend{
+    .list-14-jsbn(@default_w;@hyyd_home_w);
+    .clear;
+  }
+  //酒店列表筛选条件
+  .screening-2-jsbn{
+  	.tab-2-jsbn-hive(@hyyd_home_w);
+  }
+
+  //筛选箭头
+  .arrow-up{
+    .arrow-1-hive(t,@color:#666,@arrow_w:8,@arrow_h:4,@hyyd_home_w);
+  }
+  .arrow-down{
+    .arrow-1-hive(b,@color:#666,@arrow_w:8,@arrow_h:4,@hyyd_home_w);
+    .marginTop(2;@hyyd_home_w);
+  }
+
+  .ascending .arrow-up{
+    .arrow-1-hive(t,@color:#FC5682,@arrow_w:8,@arrow_h:4,@hyyd_home_w);
+  }
+  .descending .arrow-down{
+    .arrow-1-hive(b,@color:#FC5682,@arrow_w:8,@arrow_h:4,@hyyd_home_w);
+    .marginTop(2;@hyyd_home_w);
+  }
+
+
+  //更多按钮
+  .more-btn{
+    .btn-1-jsbn-hive();
+  }
+}

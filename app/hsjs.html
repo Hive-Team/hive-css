@@ -1,0 +1,110 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <title>hive-css</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/minicss/app.css" />
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js" ></script>
+    <script type="text/javascript" src="./src/vendors/slider.js" ></script>
+    <script type="text/javascript" src="./bower_components/jquery/src/jquery.tinyscrollbar.js" ></script>
+</head>
+<body class="adaptation-1200">
+<div class="hsjs-view">
+    <div class="layout-center-box">
+        <div class="bannar-box">
+            <a href="javascript:void(0)" style="text-align:center;" class="img-box " data-width="1920" data-height="1080" target="_self" data-reactid=".0.1.0.0.$0.0"><img src="http://image.jsbn.com/WebImage/cq/jpg/20151030/46487450691366661848/20151030181733676222_1920x1080.jpg@1200w_680h_90Q" data-reactid=".0.1.0.0.$0.0.0"></a>
+        </div>
+        <span class="title">最新MV</span>
+        <ul class="list-recommend">
+            
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151026/25491076412275996368/20151026163654831232_1920x1080.jpg" />
+                    <a href="" class="layer-box"></a>
+                </div>
+            </li>
+        </ul>
+               
+    </div>
+</div>
+<div class="footer-view">
+    <div class="nav-map">
+        <a href="#/aboutUs">关于金色百年</a>
+        <a href="#/aboutUs">联系我们</a>
+    </div>
+    <div class="er-wei-ma">
+        <span>关注金色百年</span>
+        <img src="http://image.jsbn.com/static/QR_Codes.jpg@1e_80w_80h_1c_0i_1o_90Q_1x">
+    </div>
+    <div class="nav-map nav-map-1">
+        <a>渝ICP备15007161号-1</a>
+        <a href="">版权说明</a>
+        <a href="">服务条款</a>
+    </div>
+</div>
+<div class="adaptation-box">
+    <div class="title" id="Test">Test</div>
+    <div class="bg"></div>
+    <div class="btn-box" id="showBox">
+        <div class="btn">960</div>
+        <div class="btn">1200</div>
+        <div class="btn">1440</div>
+        <div class="btn">1680</div>
+        <div class="close" id="hideBox">hide</div>
+    </div>
+</div>
+<script type="text/javascript">        
+    $(document).ready(function(){
+        var Open = false;
+        $("#Test").bind("click", function (){
+            $(this).fadeOut("fast",function(){
+                $("#showBox").show(200);
+            })
+        });
+        $("#hideBox").bind("click", function (){
+            $("#showBox").hide("normal",function(){
+                $("#Test").fadeIn(200);
+            })
+        });
+        $(".btn").bind("click", function () {                
+            var Fbl = $(this).text();
+            $(document.body).removeClass().addClass("adaptation-" + Fbl);
+        });
+    });
+</script>
+</body>
+</html>

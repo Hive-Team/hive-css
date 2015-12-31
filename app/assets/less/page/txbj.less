@@ -1,0 +1,37 @@
+//套系报价
+.txbj-page(@home_w:@default_w){
+  //清浮动
+  .clear();
+
+  //推荐列表
+  .list-recommend{
+    .list-5-jsbn(868;@home_w);
+    &{float: left;}
+  }
+  //标题
+  .title-box{
+  	.tit-3-jsbn-hive(@tit_h:30;@font_s:20;@pd:20;@border:5px;@ad_w:@default_w);
+  	.marginBottom(30;@home_w);
+  	h1{display:inline-block;}
+  	h2{
+  		.fontSize(12;@home_w);
+  		.paddingLeft(20;@home_w);
+  		&{color: #bbb;font-weight: normal;display:inline-block;}
+  	}
+  	b{color: #e83c76;font-weight: normal;}
+  	&{border-left: 5px solid #e83c76;position: relative;}
+  }
+  .find{
+  	.fontSize(12;@home_w);
+  	.lineHeight(12;@home_w);
+  	&{position:absolute;bottom:0;right:0;}
+  }
+
+  //广告
+  .ad-box{
+  	.marginTop(60;@home_w);
+    .width(300;@home_w);
+    img{width:100%;}
+  	&{float:right;}
+  }
+}

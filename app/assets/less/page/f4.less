@@ -1,0 +1,41 @@
+//选摄影师
+.f4-page(@home_w:@default_w){
+	//选项标题
+	.tab-title{
+		.tit-1-jsbn-hive(@home_w);
+	}
+
+	//筛选条
+	.filter-box{
+		.filter-1-jsbn-hive(@home_w);
+	}
+	//筛选结果
+	.screening-results{
+		.lineHeight(50;@home_w);
+		b{
+			color:#e83c76;font-weight:bold;
+			.fontSize(14;@home_w);
+		}
+		&{position: relative;margin-bottom: 0;}
+	}
+	.find{		
+		b{ color: #f873a0 ;font-weight: normal;}
+		&{position:absolute;right:0;}
+	}
+
+	//视频介绍列表
+	.movie-list{
+		.list-11-jsbn(@home_w;@home_w);
+		.item-box{
+			.height(203.328;@home_w);
+		}
+	}
+	//图片介绍列表
+	.photo-list{
+		.list-11-jsbn(@home_w;@home_w);
+		.item-box{
+			.height(300;@home_w);
+		}
+	}
+
+}

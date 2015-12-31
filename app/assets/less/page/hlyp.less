@@ -1,0 +1,45 @@
+//婚礼用品首页
+.hlyp-page(@home_w:@default_w){
+
+	
+
+
+	//样片列表
+	.list-recommend{
+		.list-12-jsbn-hive(1200;@home_w);
+		.item-box{	
+			.marginBottom(30;@home_w);
+		}	
+	}
+
+	//更多按钮
+	.more-btn{
+		.btn-1-jsbn-hive();
+	}
+
+	//弹出详情页
+	.info-box{
+		width: 800px;background-color: #fff;
+		.clear();
+		.slide-box{float: left; width: 330px;height: 330px; position:relative;background-color: #333;overflow:hidden;}
+		.img-box{
+			height: 100%;width: 100%;
+			li{height: 100%;width: 100%;}
+			img{height: 100%;width: 100%;}
+		}		
+		.standard-box{
+			float: right; width: 440px; height: 330px;
+			li{font-size: 12px;color: #666;height:28px; line-height: 14px;overflow:hidden;margin-bottom: 5px;}
+		}
+		h1{font-size: 16px; line-height: 28px;margin-top: 10px; margin-bottom: 10px;}
+		h2{font-size: 14px;margin-top: 46px;margin-bottom: 12px;}
+		p{line-height: 20px;color: #666;}
+		.list-l{float: left;display: inline-block;max-width: 210px;width:210px;}
+		.list-r{float: left;display: inline-block;margin-left: 20px;width:210px;}
+	}
+
+	//弹出页幻灯
+	.switch-box{
+		.switch-1-hive();
+	}
+}

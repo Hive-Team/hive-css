@@ -1,0 +1,43 @@
+//婚庆首页
+.hqdz-home-page(@home_w:@default_w){
+
+  //1+4导航
+  .nav-box{
+  	.list-9-jsbn(@home_w;@home_w);
+  }
+  //推荐案例
+  .cases-list{
+  	.list-10-jsbn(1200;@home_w);
+  }
+  //居中标题
+  .title-center{
+  	.tit-2-jsbn-hive(@home_w);
+  	.marginBottom(50;@home_w);
+  }
+
+  //选婚礼人
+  .nav-f4-box{
+    @mg_r:(@home_w - 240*4)/3;
+    .clear();    
+  	.item-box{
+      span{display:inline-block;}
+      &{float: left;width: 240px; margin-right:unit(@mg_r,@unit); }
+    }
+    .f4-img(@left:0;){
+      .marginBottom(15;@home_w);
+      span{width:240px;height:283px;background: url(../img/test/nav-img-f4.jpg) @left 0 no-repeat;}
+      &{width:240px;height:283px;}
+    }
+    .hzs{.f4-img(0);}
+    .zcr{.f4-img(-240px);}
+    .sys{.f4-img(-480px);}
+    .sxs{.f4-img(-720px);}
+    .f4-word(@top){width:240px;height:44px;background: url(../img/test/nav-word-f4.jpg) 0 @top no-repeat;}
+    .hzs-word{.f4-word(0);}
+    .zcr-word{.f4-word(-44px);}
+    .sys-word{.f4-word(-88px);}
+    .sxs-word{.f4-word(-132px);}
+    &{margin-right:unit(-@mg_r,@unit); }
+  }
+
+}

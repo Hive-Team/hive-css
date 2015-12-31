@@ -1,0 +1,19 @@
+//组装租车首页
+.zuche-home-page(@zuche_home_w:@default_w){
+  //租车列表
+  .list-recommend{
+    .list-17-jsbn(@zuche_home_w);
+    .clear;
+    clear:both;
+  }  
+  .service-box{
+  	img{width:100%;}
+  }	
+
+  //搜索结果
+  .result{
+  	em{color: #e53c75;}
+  	.cbox{ margin-left: 4px;vertical-align:middle;}
+   	&{margin-top: 20px; height: 30px; line-height: 30px; font-size: 12px; color: #333;  text-align: right; float: right};
+}
+}

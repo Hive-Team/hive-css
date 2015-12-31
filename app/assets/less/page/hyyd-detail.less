@@ -1,0 +1,262 @@
+//组装婚宴预订详情
+.hyyd-detail-page(@hyyd_detail_w:@default_w){
+	//清浮动；
+  .clear();
+  //宴会厅列表
+  .list-recommend{
+    .list-15-jsbn(950;@hyyd_detail_w);
+    .clear;
+    float: left;
+  }
+  // .peactureBox(806;@hyyd_detail_w);
+
+	//酒店详情左侧内容框
+  .leftInner{
+  	@mgt:30;
+  	.marginTop(@mgt;@hyyd_detail_w);
+  	.width(950,@hyyd_detail_w); float: left; .clear;}
+  	h1{
+  		@mgb:10;
+  		@mgt:20;
+  		.marginBottom(@mgb;@hyyd_detail_w);
+  		.marginTop(@mgt;@hyyd_detail_w);
+  		.fontSize(@f_s:18;@hyyd_detail_w);
+		&{color:#555;font-weight:normal;}
+	}
+
+	//推荐酒店列表
+  .recommend-adv-box{
+	  	@mgt:30;
+	  	.marginTop(@mgt;@hyyd_detail_w);
+	  	.list-16-jsbn(220;@hyyd_detail_w);
+	    .clear;
+	    float: right; 
+	    background:#F1F2F3; 
+  	}
+	//菜单宽度
+  .package-menu{
+  	.package(@hyyd_detail_w);
+  }
+
+  //顶部酒店介绍
+  .hotel-detail-box{
+  	.padding(@hyyd_detail_w,40,0,40,540);
+  	.height(436;@hyyd_detail_w);
+	position:relative;border-top:1px solid #ddd;border-bottom:1px solid #ddd;
+	.img-info{
+		.width(510;@hyyd_detail_w);position:absolute;left:0;top:40px;
+		.slider-tip-box{
+			.height(70;@hyyd_detail_w);
+			width:100%;background-color:#F1F2F3;
+			span{
+				.lineHeight(@l_h:70;@hyyd_detail_w);
+        		.fontSize(@f_s:24;@hyyd_detail_w);
+        		display:block;width:100%;height:100%;text-align:center;
+        	}
+		}
+		.slider-hover-box{display:block;}
+	}
+	.base-info{
+		.padding(@hyyd_detail_w,0,0,0,0);
+		h1{
+			@mgb:10;
+			.lineHeight(@l_h:34;@hyyd_detail_w);
+        	.fontSize(@f_s:30;@hyyd_detail_w);
+        	.marginBottom(@mgb;@hyyd_detail_w);
+        	color:#333;
+        }
+        .p{
+        	@mgr:20;
+        	@mgb:30;
+			.marginBottom(@mgb;@hyyd_detail_w);
+        	.marginRight(@mgr;@hyyd_detail_w);
+        	.lineHeight(@l_h:30;@hyyd_detail_w);
+        	.fontSize(@f_s:12;@hyyd_detail_w);
+        	color:#999;
+        	span{.padding(@hyyd_detail_w,0,5);.fontSize(@f_s:12;@hyyd_detail_w);}
+        	b{.fontSize(@f_s:12;@hyyd_detail_w);color:#333;font-weight:normal;}
+        	p{@mgr:30;.marginRight(@mgr;@hyyd_detail_w);float:left;}
+        }
+        .ico-8-js{display:inline-block;}
+	}
+	.score-info{
+		@mgb:40;
+		.marginBottom(@mgb;@hyyd_detail_w);
+		.padding(@hyyd_detail_w,20,25,20,30);
+		border-top:1px solid #fce195;border-bottom:1px solid #fce195;background-color:#fefaef;
+	}
+	.star-box{
+		@pdr:30;
+		.paddingRight(@pdr;@hyyd_detail_w);float:left;border-right:1px solid #fce195;
+	}
+	.star{
+		.height(30;@hyyd_detail_w);
+		span{@mgr:20;.fontSize(@f_s:12;@hyyd_detail_w);.marginRight(@mgr;@hyyd_detail_w);.height(30;@hyyd_detail_w);.lineHeight(@l_h:30;@hyyd_detail_w);color:#666;float:left;}
+		div{.height(30;@hyyd_detail_w);.width(60;@hyyd_detail_w);float:left;position:relative;}
+	}
+	.ico-star-3-js{position:absolute;left:0;top:8px;}
+	.score-info{
+		.etc{
+			@pdl:30;
+			.paddingLeft(@pdl;@hyyd_detail_w);float:left;
+			.item{
+				.height(30;@hyyd_detail_w);
+				.lineHeight(@l_h:30;@hyyd_detail_w);
+	        	.fontSize(@f_s:14;@hyyd_detail_w);color:#666;
+	        	em{
+	        		@mgt:5;
+	        		@mgr:15;
+	        		.marginRight(@mgr;@hyyd_detail_w);
+	        		.height(20;@hyyd_detail_w);
+					.marginTop(@mgt;@hyyd_detail_w);
+					.lineHeight(@l_h:20;@hyyd_detail_w);
+	        		.fontSize(@f_s:12;@hyyd_detail_w);
+	        		.padding(@hyyd_detail_w,0,5);
+	        		display:block;border-radius:3px;background-color:#FC5682;color:#fff;padding:0 10px;position:relative;float:left;
+	        		span{color:#fff;}
+	        	}
+	        	.arrow-5-js{position:absolute;right:-4px;top:6px;}
+	        }
+		}
+
+	}
+	.slider-box-4-js{
+		.width(510;@hyyd_detail_w);
+		.kpxq-img-box{.width(510;@hyyd_detail_w);.height(340;@hyyd_detail_w);}
+		.big-img-box{
+			width:100%;.height(340;@hyyd_detail_w);
+			a{display:block;width:100%;height:100%;}
+		}
+		.sel-box{width:100%;.height(66;@hyyd_detail_w);position:relative}
+		img{width:100%;height:100%;}
+		.slider-box{.width(420;@hyyd_detail_w);height:100%;position:relative;.margin(@hyyd_detail_w,0,'auto');overflow:hidden;
+	}
+
+	}
+  } 
+  	.hotel-detail-info{
+	  	h2{
+	  		.fontSize(@f_s:18;@hyyd_detail_w);
+			&{color:#555;font-weight:normal;}	
+		}
+	}
+	
+   .hotel-info-box{
+	   	@pdl:375;
+	   	.paddingLeft(@pdl;@hyyd_detail_w);
+	   	.height(240;@hyyd_detail_w);
+	   	&{border-top:1px solid #eee;border-bottom:1px solid #eee;overflow:hidden;position:relative;}
+	   	h2{.fontSize(@f_s:18;@hyyd_detail_w);
+		&{color:#555;font-weight:normal;}}
+   	}
+   .hotel-info-box .img-box{
+	   	.width(360;@hyyd_detail_w);
+	   	&{height:100%;position:absolute;left:0;top:0;}
+	}
+   .hotel-info-box img{width:100%;height:100%;}
+   .hotel-info-box .p{
+   		p{
+   		.fontSize(12;@hyyd_detail_w);
+	   	.padding(@hyyd_detail_w,0,0,0,0);
+	   	.margin(@hyyd_detail_w,15,0,0);
+	   	.height(210;@hyyd_detail_w);
+	   	&{overflow:auto;}
+	   }
+    }
+	   .hotel-info-box p{
+		   	.lineHeight(@l_h:30;@hyyd_detail_w);
+		   	&{color:#666;}
+	    }
+
+	.banquet-detail-info{
+		.banquet-img-box{
+	    	.height(540;@hyyd_detail_w);width:100%;
+	    	img{width:100%;height:100%;}
+		}
+		h2{@mgb:10;.marginBottom(@mgb;@hyyd_detail_w);}
+	    .Case-box{
+	    	@mgb:20;
+	    	.marginBottom(20;@hyyd_detail_w);
+	    	.height(480;@hyyd_detail_w);
+	    	.img-box{
+	    		height:100%;display:block;float:left;.width(720;@hyyd_detail_w);
+	    	}
+	    	img{width:100%;height:100%;}
+	    	.info-box{
+	    		.width(229;@hyyd_detail_w);
+	    		.height(478;@hyyd_detail_w);
+	    		float:left;border:1px solid #eee;border-left:none;position:relative;
+	    	}
+	    	 h3{.padding(@hyyd_detail_w,30,0,20,40);.fontSize(@f_s:16;@hyyd_detail_w);}
+	    	 p{
+	    	 	@pdl:40;
+	    	 	.width(140;@hyyd_detail_w);
+				.paddingLeft(@pdl;@hyyd_detail_w);
+				.lineHeight(@l_h:24;@hyyd_detail_w);
+	    	 }
+	    	 .theme-box{.width(140;@hyyd_detail_w);
+	    	 	position:absolute;left:40px;bottom:20px;
+	    	 }
+	    	 .theme{
+	    	 	.height(30;@hyyd_detail_w);.lineHeight(@l_h:30;@hyyd_detail_w);display:block;
+	    	 	b{color:#666;}
+	    	}
+	    }
+	    .list-case{
+	    	@pdb:20;
+	    	@mgb:20;
+	    	@mgr:20;
+	    	.paddingBottom(@pdb;@hyyd_detail_w);
+	    	.item-box{
+	    		.width(465;@hyyd_detail_w);
+	    		.height(310;@hyyd_detail_w);
+	    		.marginBottom(@mgb;@hyyd_detail_w);
+	    		.marginRight(@mgr;@hyyd_detail_w);
+	    		float:left;
+	    	}
+	    	&:nth-child(2n){margin-right:0;}
+	    }
+	    .list-2-js{
+		    li{
+		    	.height(250;@hyyd_detail_w);
+		    	position:relative;overflow:hidden;
+		    	&:hover .hover-box{opacity:1;}
+		    	&:hover h2{opacity:0}
+		    }
+		    .hover-box{opacity:0;width:100%;height:100%;position:absolute;left:0;top:0;z-index:20;}
+		    h2{
+		    	.fontSize(@f_s:16;@hyyd_detail_w);
+		    	position:absolute;left:10px;bottom:10px;z-index:15;color:#eee;font-weight:normal;
+		    }
+		    .img-box{
+		    	display:block;height:100%;width:100%;overflow:hidden;position:relative;z-index:10;
+		    	img{width:100%;height:100%;}
+		    }
+		    .pos-box{position:relative;width:100%;height:100%;}
+		    .etc-info,.btn-box,h3{position:relative;z-index:10;}
+		    h3{
+		    	@pdt:70;
+		    	.fontSize(@f_s:16;@hyyd_detail_w);
+		    	.paddingTop(@pdt;@hyyd_detail_w);
+		    	text-align:center;font-weight:normal;color:#eee;
+		    }
+		    .etc-info{
+		    	@pdt:30;
+		    	.paddingTop(@pdt;@hyyd_detail_w);
+		    	text-align:center;
+		    	b{.fontSize(@f_s:16;@hyyd_detail_w);color:#f4518a;font-weight:bold;}
+		    	span{.fontSize(@f_s:16;@hyyd_detail_w);color:#eee;}
+		    }
+		    .btn-box{
+		    	@pdt:30;
+		    	.paddingTop(@pdt;@hyyd_detail_w);text-align:center;
+		    }
+		    .btn-js{
+		    	display:inline-block;
+		    	&:nth-child(1){@mgr:10;.marginRight(@mgr;@hyyd_detail_w);}
+		    }
+		    .mask-bg{position:absolute;width:100%;height:100%;background:#000;left:0;top:0;opacity:0.5;z-index:0;}
+		}
+	}
+}
+

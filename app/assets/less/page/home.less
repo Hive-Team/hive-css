@@ -1,0 +1,143 @@
+//组装首页
+.home-page(@home_w:@default_w){
+
+  //板块导航
+  .nav-mid{
+    .ie-clik-1;
+    .sel-line{
+      .transitions-all();
+      .height(8;@home_w);
+      .opacity();
+      &{width:100%;background-color: #ffd800;position:absolute;bottom:0;}
+    }
+    &{height:100%;width:50%;float:left;display:block;position:relative;}
+    &:hover{.sel-line{.opacity(100);}}
+  }
+
+  .list-recommend{
+    .list-1-1-jsbn(@default_w;@home_w);
+  }
+
+  .list-recommend-1{
+    .list-1-1-jsbn(@default_w;@home_w);
+    .item-box{margin-bottom: 0;}
+    .first-box{
+      .height(74;@home_w);
+      .marginTop(4;@home_w);
+      &{padding:0;background-color:#79ceca;}
+    }
+  }
+
+  .list-recommend-2{
+    .list-1-jsbn(@default_w;@home_w);
+    .item-box{
+      .transitions-all();
+      &:hover{box-shadow:0px 0px 20px #333;}
+      &{margin-bottom: 0;}
+    }
+    .title-box{
+      .padding(@home_w,13,0);
+      span{.paddingLeft(10;@home_w);}
+      &{background-color: #fff;}
+    }
+    .first-box{
+      .height(74;@home_w);
+      .marginTop(4;@home_w);
+      &{padding:0;background-color:#fff;}
+    }
+    .sel-line{background-color: #666;}
+  }
+
+
+  //婚礼用品板块
+  .supplies-box{
+    @border_w: 1px/@default_w*@home_w;
+    .clear();
+    .left-box{
+      a{
+        .transitions-all();
+        .opacity();
+        &{display:block;background-color: #000;position:absolute;}
+      }
+      .link-01{.width(395;@home_w);.height(319;@home_w);top:0;left:0; &:hover{.opacity(50);}}
+      .link-02{.width(196;@home_w);.height(319;@home_w);.top(0;@home_w);.left(400;@home_w);&:hover{.opacity(50);}}
+      .link-03{.width(196;@home_w);.height(158;@home_w);.top(0;@home_w);.left(599;@home_w);}
+      .link-04{.width(196;@home_w);.height(158;@home_w);.top(161;@home_w);.left(599;@home_w);&:hover{.opacity(50);}}
+      .link-05{.width(196;@home_w);.height(158;@home_w);.top(326;@home_w);.left(0;@home_w);}
+      .link-06{.width(196;@home_w);.height(158;@home_w);.top(486;@home_w);.left(0;@home_w);&:hover{.opacity(50);}}
+      .link-07{.width(196;@home_w);.height(319;@home_w);.top(326;@home_w);.left(199;@home_w);&:hover{.opacity(50);}}
+      .link-08{.width(395;@home_w);.height(319;@home_w);.top(326;@home_w);.left(400;@home_w);&:hover{.opacity(50);}}
+      &{float:left;position:relative;}
+    }
+    .right-box{
+      .width(380;@home_w);
+      .img-box{
+        .width(378;@home_w);
+        .height(568;@home_w);
+        &{border: @border_w solid #f31a61;}
+      }
+      img{width:100%;height:100%;}
+      &{float:right}
+    }
+    .first-box{
+      .height(74;@home_w);
+      .sel-line{background-color: #f5f5f5;}
+      &{padding:0;background-color:#f31a61;}
+    }
+  }
+
+
+
+
+  //背景颜色
+  .color-1-box{
+    .padding(@home_w,80,0);
+    &{background-color: #f5f5f5;width:100%;}
+  }
+  .color-2-box{
+    .padding(@home_w,80,0);
+    &{background-color: #fff;width:100%;}
+  }
+
+  //分隔线
+  .cut-line{
+  	.line-1-hive(@color:#ddd);
+  	.marginBottom(30;@home_w);
+  }
+  .list-adv{
+    .list-2-jsbn(@default_w;@home_w);    
+  }
+
+  .comment{
+    position: absolute;top:23px;left: 375px;.clear();
+    li{float:left;width: 214px;margin-right: 24px;.clear();}
+    a{display:block;}
+    span{float:left;display:block;height:51px;width: 214px;margin-bottom: 20px;background-color: #fff; .opacity(0);}
+  }
+
+  //底部导航
+  .nav-bot{
+    .nav-box{
+      .width(@default_w - 392;@home_w);
+      .padding(@home_w,60,196);
+      .clear();
+      &{margin:0 auto;position:relative;}
+    }
+    i{
+      .width(30;@home_w); 
+      .height(63;@home_w);
+      .marginTop(-32;@home_w);
+      &{display:inline-block;position:absolute; top:50%;}
+    }
+    li{
+      .margin(@home_w,10,16);
+      .width(170;@home_w); 
+      .height(170;@home_w);
+      .transitions-all();
+      &{float: left;cursor:pointer;overflow:hidden;}
+    }
+    a{display:block;height:100%;background:#fff;.opacity();}
+    &{width:100%;background-color: #F5F5F5;position:relative;text-align: center;}
+  }
+}
+

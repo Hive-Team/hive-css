@@ -1,0 +1,245 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <title>hive-css</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/minicss/app.css" />
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js" ></script>
+    <script type="text/javascript" src="./src/vendors/slider.js" ></script>
+    <script type="text/javascript" src="./bower_components/jquery/src/jquery.tinyscrollbar.js" ></script>
+    <script type="text/javascript">
+    $(function(){
+        $(".scrollbarall").each(function(index, element) {
+            var e = $(this);
+
+            e.tinyscrollbar();
+            e.find('.scrollbar').css({opacity:0});
+
+            e.bind('mouseenter',function(){
+                $('.scrollbar',e).animate({
+                    opacity:1
+                },300);
+            });
+            
+            e.bind('mouseleave',function(){
+                $('.scrollbar',e).animate({
+                    opacity:0
+                },300);
+            });
+        });
+    })
+    </script>
+</head>
+<body class="adaptation-1200">
+<div class="txbj-view">
+    <div class="layout-center-box">
+
+        <ul class="list-recommend">
+            <div class="title-box">
+                <h1>婚纱摄影套系</h1>
+                <h2>摄影师档期有限，提前 <b>支付定金</b> 可确保 <b>预约</b> 到你喜欢的摄影师！</h2>
+                <span class="find">找到 <b>9</b> 个套系</span>
+            </div>
+            
+            <li class="item-box">
+                <a href="#/suite/10025/20050" style="text-align:center;" class="img-box " data-width="550" data-height="320" target="_self">
+                    <img src="http://image.jsbn.com/WebImage/cq/zip/20151014/98262380738522549881/20151014205251761749_550x320.jpg@320h_90Q">
+                </a>
+                <div class="r-box">    
+                    <div class="price"> <em>¥</em> <b>2999.00</b></div>
+                    <div class="scrollbarall">
+                        <div class="scrollbar">
+                            <div class="track">
+                                <div class="thumb">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            
+                                <div class="overview">
+                                    <p><b>团队：资深摄影师、资深造型师、灯光师（本店系统直接安排）。</b></p>
+                                    <p><b>服务：一对二</b></p>
+                                    <p><b>服装：4套（国际品牌礼服漫莎菲儿、圣利亚通选）。</b></p>
+                                    <p><b>照片：拍摄120张，精修42张。</b></p>
+                                    <p><b>景点：3000平米震撼艺术摄影棚+九龙滨江广场街景及沿途风景拍摄，摄影师灵感发挥。</b></p>
+                                    <p><b>团队：资深摄影师、资深造型师、灯光师（本店系统直接安排）。</b></p>
+                                    <p><b>服务：一对二</b></p>
+                                    <p><b>服装：4套（国际品牌礼服漫莎菲儿、圣利亚通选）。</b></p>
+                                    <p><b>照片：拍摄120张，精修42张。</b></p>
+                                    <p><b>景点：3000平米震撼艺术摄影棚+九龙滨江广场街景及沿途风景拍摄，摄影师灵感发挥。</b></p>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>                
+            </li>
+
+            <li class="item-box">
+                <a href="#/suite/10025/20050" style="text-align:center;" class="img-box " data-width="550" data-height="320" target="_self">
+                    <img src="http://image.jsbn.com/WebImage/cq/zip/20151014/98262380738522549881/20151014205251761749_550x320.jpg@320h_90Q">
+                </a>
+                <div class="r-box">    
+                    <div class="price"> <em>¥</em> <b>2999.00</b></div>
+                    <div class="scrollbarall cur-scroll">
+                        <div class="scrollbar disable">
+                            <div class="track">
+                                <div class="thumb">
+                                    <div class="end"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            <div class="info">
+                                <div class="overview">
+                                    <p><b>团队：资深摄影师、资深造型师、灯光师（本店系统直接安排）。</b></p>
+                                    <p><b>服务：一对二</b></p>
+                                    <p><b>服装：4套（国际品牌礼服漫莎菲儿、圣利亚通选）。</b></p>
+                                    <p><b>照片：拍摄120张，精修42张。</b></p>
+                                    <p><b>景点：3000平米震撼艺术摄影棚+九龙滨江广场街景及沿途风景拍摄，摄影师灵感发挥。</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </li>
+            <li class="item-box">
+                <a href="#/suite/10025/20050" style="text-align:center;" class="img-box " data-width="550" data-height="320" target="_self">
+                    <img src="http://image.jsbn.com/WebImage/cq/zip/20151014/98262380738522549881/20151014205251761749_550x320.jpg@320h_90Q">
+                </a>
+                <div class="r-box">    
+                    <div class="price"> <em>¥</em> <b>2999.00</b></div>
+                    <div class="scrollbarall cur-scroll">
+                        <div class="scrollbar disable">
+                            <div class="track">
+                                <div class="thumb">
+                                    <div class="end"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            <div class="info">
+                                <div class="overview">
+                                    <p><b>团队：资深摄影师、资深造型师、灯光师（本店系统直接安排）。</b></p>
+                                    <p><b>服务：一对二</b></p>
+                                    <p><b>服装：4套（国际品牌礼服漫莎菲儿、圣利亚通选）。</b></p>
+                                    <p><b>照片：拍摄120张，精修42张。</b></p>
+                                    <p><b>景点：3000平米震撼艺术摄影棚+九龙滨江广场街景及沿途风景拍摄，摄影师灵感发挥。</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </li>
+            <li class="item-box">
+                <a href="#/suite/10025/20050" style="text-align:center;" class="img-box " data-width="550" data-height="320" target="_self">
+                    <img src="http://image.jsbn.com/WebImage/cq/zip/20151014/98262380738522549881/20151014205251761749_550x320.jpg@320h_90Q">
+                </a>
+                <div class="r-box">    
+                    <div class="price"> <em>¥</em> <b>2999.00</b></div>
+                    <div class="scrollbarall cur-scroll">
+                        <div class="scrollbar disable">
+                            <div class="track">
+                                <div class="thumb">
+                                    <div class="end"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            <div class="info">
+                                <div class="overview">
+                                    <p><b>团队：资深摄影师、资深造型师、灯光师（本店系统直接安排）。</b></p>
+                                    <p><b>服务：一对二</b></p>
+                                    <p><b>服装：4套（国际品牌礼服漫莎菲儿、圣利亚通选）。</b></p>
+                                    <p><b>照片：拍摄120张，精修42张。</b></p>
+                                    <p><b>景点：3000平米震撼艺术摄影棚+九龙滨江广场街景及沿途风景拍摄，摄影师灵感发挥。</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </li>
+            <li class="item-box">
+                <a href="#/suite/10025/20050" style="text-align:center;" class="img-box " data-width="550" data-height="320" target="_self">
+                    <img src="http://image.jsbn.com/WebImage/cq/zip/20151014/98262380738522549881/20151014205251761749_550x320.jpg@320h_90Q">
+                </a>
+                <div class="r-box">    
+                    <div class="price"> <em>¥</em> <b>2999.00</b></div>
+                    <div class="scrollbarall cur-scroll">
+                        <div class="scrollbar disable">
+                            <div class="track">
+                                <div class="thumb">
+                                    <div class="end"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewport">
+                            <div class="info">
+                                <div class="overview">
+                                    <p><b>团队：资深摄影师、资深造型师、灯光师（本店系统直接安排）。</b></p>
+                                    <p><b>服务：一对二</b></p>
+                                    <p><b>服装：4套（国际品牌礼服漫莎菲儿、圣利亚通选）。</b></p>
+                                    <p><b>照片：拍摄120张，精修42张。</b></p>
+                                    <p><b>景点：3000平米震撼艺术摄影棚+九龙滨江广场街景及沿途风景拍摄，摄影师灵感发挥。</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </li>
+        </ul>
+        <div class="ad-box"><img src="http://image.jsbn.com/static/la_sposa2.jpg" /></div>
+        
+    </div>
+</div>
+<div class="footer-view">
+    <div class="nav-map">
+        <a href="#/aboutUs">关于金色百年</a>
+        <a href="#/aboutUs">联系我们</a>
+    </div>
+    <div class="er-wei-ma">
+        <span>关注金色百年</span>
+        <img src="http://image.jsbn.com/static/QR_Codes.jpg@1e_80w_80h_1c_0i_1o_90Q_1x">
+    </div>
+    <div class="nav-map nav-map-1">
+        <a>渝ICP备15007161号-1</a>
+        <a href="">版权说明</a>
+        <a href="">服务条款</a>
+    </div>
+</div>
+<div class="adaptation-box">
+    <div class="title" id="Test">Test</div>
+    <div class="bg"></div>
+    <div class="btn-box" id="showBox">
+        <div class="btn">960</div>
+        <div class="btn">1200</div>
+        <div class="btn">1440</div>
+        <div class="btn">1680</div>
+        <div class="close" id="hideBox">hide</div>
+    </div>
+</div>
+<script type="text/javascript"> 
+    $(function(){
+        var Open = false;
+        $("#Test").bind("click", function (){
+            $(this).fadeOut("fast",function(){
+                $("#showBox").show(200);
+            })
+        });
+        $("#hideBox").bind("click", function (){
+            $("#showBox").hide("normal",function(){
+                $("#Test").fadeIn(200);
+            })
+        });
+        $(".btn").bind("click", function () {                
+            var Fbl = $(this).text();
+            $(document.body).removeClass().addClass("adaptation-" + Fbl);
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+//婚纱摄影首页
+.hssy-home-page(@home_w:@default_w){
+
+	//导航
+	.nav-box{
+		img{width:100%;}
+		a{			
+			.opacity();	
+			.transitions-all();		
+			&{position:absolute;background-color: #fff;}
+			&:hover{.opacity(50);}
+		}
+		&{position: relative;}}
+	.suite-link{
+		.height(602;@home_w);
+		.width(400;@home_w);
+		.top(0;@home_w);
+		.left(0;@home_w);
+	}
+	.samples-link{
+		.height(403;@home_w);
+		.width(400;@home_w);
+		.top(0;@home_w);
+		.left(400;@home_w);
+	}
+	.pringles-link{
+		.height(403;@home_w);
+		.width(400;@home_w);
+		.top(0;@home_w);
+		.left(800;@home_w);
+	}
+	.suite-home-link{
+		.height(203;@home_w);
+		.width(400;@home_w);
+		.top(401;@home_w);
+		.left(400;@home_w);
+	}
+	.weddingmv-link{
+		.height(203;@home_w);
+		.width(400;@home_w);
+		.top(401;@home_w);
+		.left(800;@home_w);
+	}
+
+	//样片标题
+	.title-sample{
+		.height(210;@home_w);
+		&{display: block;width: 100%; background: url('http://image.jsbn.com/static/title-bg-1.png') center center no-repeat;}
+	}
+
+	//推荐样片列表
+	.list-recommend{
+		.list-3-jsbn(@default_w;@home_w);
+		.item-box{
+			.marginBottom(30;@home_w);
+		}
+	}
+
+	//分隔线标题
+	.title-box{
+		.tit-4-jsbn-hive(@home_w);
+		.marginTop(50;@home_w);
+		.marginBottom(30;@home_w);
+	}
+}

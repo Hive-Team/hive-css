@@ -1,0 +1,35 @@
+//婚庆首页
+.sjal-page(@home_w:@default_w){
+
+	//选项标题
+	.tab-title{
+		.tit-1-jsbn-hive(@home_w);
+	}
+	//筛选条
+	.filter-box{
+		.filter-1-jsbn-hive(@home_w);
+	}
+	//搜索结果
+	.screening-results{
+		.height(20;@home_w);
+		.paddingTop(25;@home_w);
+		.marginBottom(30;@home_w);
+		.find{		
+			.bottom(8;@home_w);
+			b{ color: #f873a0 ;font-weight: normal;}
+			&{position:absolute;right:0;}
+		}
+		&{position: relative;}
+	}
+
+	//案例列表
+	.cases-list{
+		.list-10-jsbn(@default_w;@home_w);
+	}
+
+	//更多按钮
+	.more-btn{
+		.btn-1-jsbn-hive();
+	}
+
+}

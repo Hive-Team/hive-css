@@ -1,0 +1,41 @@
+//按钮库
+
+//基本方法
+/***
+@f_s                字体尺寸
+@pd                 那边距
+@color              字体颜色
+@color_hover
+@bg_color           背景颜色
+@bg_color_hover
+@radius             圆角
+@radius_hover
+@border             边框
+@border_hover
+***/
+
+.btn-1-hive(  
+  @f_s:14;
+  @f_s_hover:14;
+  @color:@black;
+  @color_hover:@black;
+  @bg_color:none;
+  @bg_color_hover:none;
+  @border:none;
+  @border_hover:none;
+  @radius:0;
+  @radius_hover:0;
+  @layout_w:@default_w;){
+  overflow:hidden;text-align:center;display:block;cursor:pointer;position:relative;.fontSize(@layout_w;@f_s);background:@bg_color;color:@color;border:@border;.borderRadius(@layout_w;@radius);.padding(@layout_w,10,15);
+  &:hover{.fontSize(@layout_w;@f_s_hover);color:@color_hover;background:@bg_color_hover;.borderRadius(@layout_w;@radius_hover);border:@border_hover;}
+  & input{width:100%;height:1000px;/* 防止IE6 bug */position:absolute;background:none;cursor:pointer;left:0;top:0;}
+  .transitions-all;
+}
+
+
+.btn-1-jsbn-hive(){
+  padding:14px 0;width:420px;margin:30px auto;border: 2px solid #f6f6f6;text-align: center;cursor: pointer;
+  .transitions-all(0.5s);
+  span{color: #999;font-size: 20px; line-height: 22px;padding-right: 35px; background:url(../img/arrow-1-js.png) no-repeat right}
+  &:hover{background-color:#f6f6f6; }
+}

@@ -1,0 +1,147 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <title>hive-css</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/minicss/app.css" />
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js" ></script>
+    <script type="text/javascript" src="./src/vendors/slider.js" ></script>
+    <script type="text/javascript" src="./bower_components/jquery/src/jquery.tinyscrollbar.js" ></script>
+</head>
+<body class="adaptation-1200">
+<div class="sjal-view">
+    <div class="layout-center-box">
+        <div class="tab-title">
+            <span class="sel">实景案例</span>
+        </div>
+        <div class="filter-box">
+            <span class="title"><i class="ico-1-js ico-1-2-js"></i><b>风格</b></span>
+            <div class="tab-box">
+                <span class="tab tab-sel">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+            </div>
+        </div>
+        <div class="filter-box">
+            <span class="title"><i class="ico-1-js ico-1-1-js"></i><b>价位</b></span>
+            <div class="tab-box">
+                <span class="tab tab-sel">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+                <span class="tab">时尚创意</span>
+            </div>
+        </div>
+        <div class="screening-results">            
+            <span class="find">找到案例 <b>67</b> 套</span>
+        </div>
+
+        <ul class="cases-list">
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151023/32463157058646244689/20151023201904222534_1200x800.jpg@380w_250h_90Q" />
+                    <a href="" class="layer-box">
+                        <div class="layer"></div>
+                        <div class="info">
+                            <h3>蔚蓝星空</h3>
+                            <span class="date">
+                                <span>(</span>
+                                <span>2015-06-21</span>
+                                <span>)</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151023/32463157058646244689/20151023201904222534_1200x800.jpg@380w_250h_90Q" />
+                    <a href="" class="layer-box">
+                        <div class="layer"></div>
+                        <div class="info">
+                            <h3>蔚蓝星空</h3>
+                            <span class="date">
+                                <span>(</span>
+                                <span>2015-06-21</span>
+                                <span>)</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="item-box">
+                <div class="img-box">
+                    <img src="http://image.jsbn.com/WebImage/cq/jpg/20151023/32463157058646244689/20151023201904222534_1200x800.jpg@380w_250h_90Q" />
+                    <a href="" class="layer-box">
+                        <div class="layer"></div>
+                        <div class="info">
+                            <h3>蔚蓝星空</h3>
+                            <span class="date">
+                                <span>(</span>
+                                <span>2015-06-21</span>
+                                <span>)</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="more-btn"><span>点击查看更多</span></div>
+           
+    </div>
+</div>
+<div class="footer-view">
+    <div class="nav-map">
+        <a href="#/aboutUs">关于金色百年</a>
+        <a href="#/aboutUs">联系我们</a>
+    </div>
+    <div class="er-wei-ma">
+        <span>关注金色百年</span>
+        <img src="http://image.jsbn.com/static/QR_Codes.jpg@1e_80w_80h_1c_0i_1o_90Q_1x">
+    </div>
+    <div class="nav-map nav-map-1">
+        <a>渝ICP备15007161号-1</a>
+        <a href="">版权说明</a>
+        <a href="">服务条款</a>
+    </div>
+</div>
+<div class="adaptation-box">
+    <div class="title" id="Test">Test</div>
+    <div class="bg"></div>
+    <div class="btn-box" id="showBox">
+        <div class="btn">960</div>
+        <div class="btn">1200</div>
+        <div class="btn">1440</div>
+        <div class="btn">1680</div>
+        <div class="close" id="hideBox">hide</div>
+    </div>
+</div>
+<script type="text/javascript"> 
+    $(function(){
+        var Open = false;
+        $("#Test").bind("click", function (){
+            $(this).fadeOut("fast",function(){
+                $("#showBox").show(200);
+            })
+        });
+        $("#hideBox").bind("click", function (){
+            $("#showBox").hide("normal",function(){
+                $("#Test").fadeIn(200);
+            })
+        });
+        $(".btn").bind("click", function () {                
+            var Fbl = $(this).text();
+            $(document.body).removeClass().addClass("adaptation-" + Fbl);
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+//尺寸适配
+//
+//
+
+
+//字体尺寸
+.fontSize(@f_s:0;@w:@default_w){
+  @fs:@f_s*@w/@default_w;
+
+  .if(@s) when (@s <= @min_font_ch){
+    font-size:unit(@min_font_ch,@unit);
+  }
+  .if(@s) when (@s > @min_font_ch){
+    font-size:unit(@s,@unit);
+  }
+  .if(@fs);
+}
+
+
+//圆角
+.borderRadius(@b_r_s:0;@w:@default_w){
+  @brs:@b_r_s*@w/@default_w;
+
+  .if(@s) when(@s < 3){
+    border-radius:0;
+  }
+  .if(@s) when(@s >= 3){
+    border-radius:unit(@brs,@unit);
+  }
+  .if(@brs);
+}
+
+
+//宽度
+.width(@w_s:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    width:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    width:~`@{s}`;
+  }
+  .if(@w_s);
+}
+
+
+//高度
+.height(@h_s:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    height:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    height:~`@{s}`;
+  }
+  .if(@h_s);
+}
+
+
+//绝对定位坐标
+.top(@t_s:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    top:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    top:~`@{s}`;
+  }
+  .if(@t_s);
+}
+.right(@r_s:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    right:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    right:~`@{s}`;
+  }
+  .if(@r_s);
+}
+.bottom(@b_s:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    bottom:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    bottom:~`@{s}`;
+  }
+  .if(@b_s);
+}
+.left(@l_s:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    left:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    left:~`@{s}`;
+  }
+  .if(@l_s);
+}
+
+
+//行高
+.lineHeight(@l_h:0;@w:@default_w){
+  @lh:@l_h*@w/@default_w;
+  @lh_m:@min_font_ch + 4;
+
+  .if(@l) when(@l <= @lh_m){
+    line-height:unit(@lh_m,@unit);
+  }
+  .if(@l) when(@l > @lh_m){
+    line-height:unit(@l,@unit);
+  }
+  .if(@lh);
+}
+
+
+//外边距
+.margin(@w,@rest...){
+  //判断是否为单个数字
+  .if(@r) when(isnumber(@r)){
+    margin:@r;
+  }
+  //判断是否为单个字符串
+  .if(@r) when(isstring(@r)){
+    margin:~`@{rest}`;
+  }
+  //不为单个数字或字符串
+  .if(@r) when(isnumber(@r) = false)and(isstring(@r) = false){
+    @len:~`@{rest}.length`;
+
+    //两个参数
+    .if(@l) when(@l = 2){
+      @mgtb:~`@{rest}[0]`;
+      @mgrl:~`@{rest}[1]`;
+
+      .if(@mtb,@mrl) when(isstring(@mtb) = false)and(isstring(@mrl) = false){
+        margin:unit(@mtb*@w/@default_w,@unit) unit(@mrl*@w/@default_w,@unit);
+      }
+      .if(@mtb,@mrl) when(isstring(@mtb))and(isstring(@mrl) = false){
+        margin:@mtb unit(@mrl*@w/@default_w,@unit);
+      }
+      .if(@mtb,@mrl) when(isstring(@mtb) = false)and(isstring(@mrl)){
+        margin:unit(@mtb*@w/@default_w,@unit) @mrl;
+      }
+      .if(@mgtb,@mgrl);
+    }
+    //三个参数
+    .if(@l) when(@l = 3){
+      @mgt:~`@{rest}[0]`;
+      @mgrl:~`@{rest}[1]`;
+      @mgb:~`@{rest}[2]`;
+
+      .if(@mt,@mrl,@mb) when(isstring(@mt) = false)and(isstring(@mrl) = false)and(isstring(@mb) = false){
+        margin:unit(@mt*@w/@default_w,@unit) unit(@mrl*@w/@default_w,@unit) unit(@mb*@w/@default_w,@unit);
+      }
+      .if(@mt,@mrl,@mb) when(isstring(@mt))and(isstring(@mrl) = false)and(isstring(@mb) = false){
+        margin:@mt unit(@mrl*@w/@default_w,@unit) unit(@mb*@w/@default_w,@unit);
+      }
+      .if(@mt,@mrl,@mb) when(isstring(@mt) = false)and(isstring(@mrl))and(isstring(@mb) = false){
+        margin:unit(@mt*@w/@default_w,@unit) @mrl unit(@mb*@w/@default_w,@unit);
+      }
+      .if(@mt,@mrl,@mb) when(isstring(@mt) = false)and(isstring(@mrl) = false)and(isstring(@mb)){
+        margin:unit(@mt*@w/@default_w,@unit) unit(@mrl*@w/@default_w,@unit) @mb;
+      }
+      .if(@mt,@mrl,@mb) when(isstring(@mt) = false)and(isstring(@mrl))and(isstring(@mb)){
+        margin:unit(@mt*@w/@default_w,@unit) @mrl @mb;
+      }
+      .if(@mt,@mrl,@mb) when(isstring(@mt))and(isstring(@mrl) = false)and(isstring(@mb)){
+        margin:@mt unit(@mrl*@w/@default_w,@unit);
+      }
+      .if(@mt,@mrl,@mb) when(isstring(@mt) = false)and(isstring(@mrl))and(isstring(@mb)){
+        margin:@mt @mrl unit(@mb*@w/@default_w,@unit);
+      }
+      .if(@mgt,@mgrl,@mgb);
+    }
+    //四个参数
+    .if(@l) when(@l = 4){
+      @mgt:~`@{rest}[0]`;
+      @mgr:~`@{rest}[1]`;
+      @mgb:~`@{rest}[2]`;
+      @mgl:~`@{rest}[3]`;
+
+      margin:unit(@mgt*@w/@default_w,@unit) unit(@mgr*@w/@default_w,@unit) unit(@mgb*@w/@default_w,@unit) unit(@mgl*@w/@default_w,@unit);
+    }
+    .if(@len);
+  }
+  .if(@rest);
+}
+.marginTop(@mg:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    margin-top:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    margin-top:~`@{s}`;
+  }
+  .if(@mg);
+}
+.marginRight(@mg:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    margin-right:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    margin-right:~`@{s}`;
+  }
+  .if(@mg);
+}
+.marginBottom(@mg:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    margin-bottom:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    margin-bottom:~`@{s}`;
+  }
+  .if(@mg);
+}
+.marginLeft(@mg:0;@w:@default_w){
+  .if(@s) when(isnumber(@s)){
+    margin-left:unit(@s*@w/@default_w,@unit);
+  }
+  .if(@s) when(isstring(@s)){
+    margin-left:~`@{s}`;
+  }
+  .if(@mg);
+}
+
+
+//内边距
+.padding(@w:@default_w,@rest...){
+  .if(@r) when(isnumber(@r)){
+    padding:@r;
+  }
+  .if(@r) when(isnumber(@r) = false){
+    @len:~`@{rest}.length`;
+
+    .if(@l) when(@l = 2){
+      @pdtb:~`@{rest}[0]`;
+      @pdrl:~`@{rest}[1]`;
+
+      padding:unit(@pdtb*@w/@default_w,@unit) unit(@pdrl*@w/@default_w,@unit);
+    }
+    .if(@l) when(@l = 3){
+      @pdt:~`@{rest}[0]`;
+      @pdrl:~`@{rest}[1]`;
+      @pdb:~`@{rest}[2]`;
+
+      padding:unit(@pdt*@w/@default_w,@unit) unit(@pdrl*@w/@default_w,@unit) unit(@pdb*@w/@default_w,@unit);
+    }
+    .if(@l) when(@l = 4){
+      @pdt:~`@{rest}[0]`;
+      @pdr:~`@{rest}[1]`;
+      @pdb:~`@{rest}[2]`;
+      @pdl:~`@{rest}[3]`;
+
+      padding:unit(@pdt*@w/@default_w,@unit) unit(@pdr*@w/@default_w,@unit) unit(@pdb*@w/@default_w,@unit) unit(@pdl*@w/@default_w,@unit);
+    }
+    .if(@len);
+  }
+  .if(@rest);
+}
+.paddingTop(@pd:0;@w:@default_w){
+  padding-top:unit(@pd*@w/@default_w,@unit);
+}
+.paddingRight(@pd:0;@w:@default_w){
+  padding-right:unit(@pd*@w/@default_w,@unit);
+}
+.paddingBottom(@pd:0;@w:@default_w){
+  padding-bottom:unit(@pd*@w/@default_w,@unit);
+}
+.paddingLeft(@pd:0;@w:@default_w){
+  padding-left:unit(@pd*@w/@default_w,@unit);
+}

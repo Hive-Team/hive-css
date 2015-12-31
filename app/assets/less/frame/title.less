@@ -1,0 +1,88 @@
+//标题系列
+
+
+//选项卡标题
+.tit-1-jsbn-hive(@ad_w:@default_w){
+  @font_s:16;  
+  @box_h:40;
+  @title_h:38;
+  @title_pad:25;
+  position: relative;
+  .height(@box_h;@ad_w);
+  .clear();
+  span{
+    display:inline-block; border-top: 2px solid transparent;border-left: 1px solid transparent; border-right: 1px solid transparent;color: #666;z-index: 1;cursor: pointer;float: left;
+    .marginTop(0;@ad_w);
+    .fontSize(@font_s;@ad_w);
+    .height(@title_h;@ad_w);
+    .lineHeight(@box_h;@ad_w);
+    .paddingLeft(@title_pad;@ad_w);
+    .paddingRight(@title_pad;@ad_w);
+  }
+  .sel{
+    border-top: 2px solid #e83c76;border-left: 1px solid #ddd; border-right: 1px solid #ddd;color: #e83c76;background-color: #fff;font-weight: bold;padding-bottom: 1px;
+  }
+  .sec{
+    font-weight:normal;
+    .marginLeft(10;@ad_w);
+    .fontSize(14;@ad_w);
+    .paddingLeft(15;@ad_w);
+    .paddingRight(15;@ad_w);
+    .height(32;@ad_w);
+    .lineHeight(34;@ad_w);
+    .marginTop(6;@ad_w);
+  }
+  .nnn{border-top-color: #ddd; color:#aaa;padding-bottom: 0px;}
+  .line-bot-hive(0;0;@ad_w);
+}
+
+
+//居中大标题
+.tit-2-jsbn-hive(@ad_w:@default_w){
+  @h1_font_s:40;
+  @h1_mgb:10;
+  h1{ font-weight: normal; text-align: center;
+    .fontSize(@h1_font_s;@ad_w);
+    .marginBottom(@h1_mgb;@ad_w);
+  }
+  span{color: #bbb;display: block;text-align: center;.fontSize(12;@ad_w);}
+}
+
+
+//左黑边标题
+
+.tit-3-jsbn-hive(@tit_h:0;@font_s:0;@pd:0;@border:0;@ad_w:@default_w){
+  border-left: @border solid #000;
+  .height(@tit_h;@ad_w);
+  .lineHeight(@tit_h;@ad_w);
+  .paddingLeft(@pd;@ad_w);  
+  h1{
+    color:#454545; font-weight: normal;
+    .fontSize(@font_s;@ad_w);
+  }
+}
+
+//分隔线标题
+
+.tit-4-jsbn-hive(@ad_w:@default_w){
+  @h1_s:32;
+  @h2_mgb:6;
+  @h2_s:12;
+  text-align: center;position: relative;
+  .line{height: 1px; width: 100%; overflow: hidden; background-color: #eee; position: absolute; top:50%; z-index:-1;}
+  .title{
+    display:inline-block;background-color:#fff;
+    .padding(@ad_w,0,50);
+    h1{
+      position: relative; font-weight: normal; color: #333;
+      .fontSize(@h1_s;@ad_w);
+      .lineHeight(@h1_s;@ad_w);
+      .marginBottom(@h2_mgb;@ad_w);
+    }
+    h2{
+      position: relative;font-weight: normal;color: #ccc;
+      .fontSize(@h2_s;@ad_w);
+      .lineHeight(@h2_s;@ad_w);
+    }
+  }
+}
